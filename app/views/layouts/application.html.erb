@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shipx</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <!-- App CSS -->
+        <link href="/assets/bootstrap.min.css" rel="stylesheet" />
+        <link href="/assets/core.css" rel="stylesheet" />
+        <link href="/assets/components.css" rel="stylesheet" />
+        <link href="/assets/icons.css" rel="stylesheet" />
+        <link href="/assets/pages.css" rel="stylesheet" />
+        <link href="/assets/menu.css" rel="stylesheet" />
+        <link href="/assets/responsive.css" rel="stylesheet" />
+             <!-- jQuery  -->
+       <%= javascript_include_tag  "/assets/jquery.min.js" %>
+       <%= javascript_include_tag  "/assets/bootstrap.min.js" %>
+       <%= javascript_include_tag  "/assets/detect.js" %>
+       <%= javascript_include_tag  "/assets/fastclick.js" %>
+       <%= javascript_include_tag  "/assets/jquery.slimscroll.js" %>
+       <%= javascript_include_tag  "/assets/jquery.blockUI.js" %>
+       <%= javascript_include_tag  "/assets/waves.js" %>
+       <%= javascript_include_tag  "/assets/wow.min.js" %>
+       <%= javascript_include_tag  "/assets/jquery.nicescroll.js" %>
+       <%= javascript_include_tag  "/assets/jquery.scrollTo.min.js" %>
+
+        <!-- App js -->
+       <%= javascript_include_tag  "/assets/jquery.core.js" %>
+       <%= javascript_include_tag  "/assets/jquery.app.js" %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

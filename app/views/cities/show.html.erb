@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @city.name %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @city.state %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @city.country %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @city.lat %>
+</p>
+
+<p>
+  <strong>Lng:</strong>
+  <%= @city.lng %>
+</p>
+                <div class="row">
+                <div class="col-md-3">
+                  <%= link_to 'Back', cities_path, class: 'btn btn-primary'%> 
+                </div> 
+                <div class="col-md-3">
+                  <%= link_to 'Edit', edit_city_path(@city), class: 'btn btn-primary'%> 
+                </div>                                                    
+              </div>  
+              </div>
+<%#= link_to 'Edit', edit_city_path(@city) %> 
+<%#= link_to 'Back', cities_path %>
