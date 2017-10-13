@@ -17,6 +17,11 @@
   }
   .show{
     width: 100px;
+    margin-left: -70%;
+  }
+  .showback{
+    width: 100px;
+    margin-left: -460%;
   }
 </style>
 
@@ -75,12 +80,13 @@
                 <div class="col-md-6 back">
                   <%= link_to 'Back', cities_path, class: 'btn btn-primary' if request.url.include?("new")%> 
                 </div> 
+                <div class="col-md-3">
+                  <%= link_to 'Show', @city, class: 'btn btn-primary show' if request.url.include?("edit")%> 
+                </div>                 
                 <div class="col-md-3 back">
-                  <%= link_to 'Back', cities_path, class: 'btn btn-primary' if request.url.include?("edit")%> 
+                  <%= link_to 'Back', cities_path, class: 'btn btn-primary showback' if request.url.include?("edit")%> 
                 </div> 
-                <div class="col-md-3 show">
-                  <%= link_to 'Show', @city, class: 'btn btn-primary' if request.url.include?("edit")%> 
-                </div>                                                    
+                                                   
               </div>
             
 <% end %>
