@@ -62,7 +62,7 @@ class CitiesController < ApplicationController
   end
 
   def copy
-      @cities = ::City.all
+    @cities = ::City.all
     ::City.in_progess
     render 'index'
   end

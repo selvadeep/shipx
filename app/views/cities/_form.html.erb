@@ -10,7 +10,9 @@
   .back{
     width: 100px;
   }
-
+  .show{
+    width: 100px;
+  }
 </style>
 
 <%= form_for(city) do |f| %>
@@ -68,10 +70,10 @@
                 <div class="col-md-6 back">
                   <%= link_to 'Back', cities_path, class: 'btn btn-primary' if request.url.include?("new")%> 
                 </div> 
-                <div class="col-md-3">
+                <div class="col-md-3 back">
                   <%= link_to 'Back', cities_path, class: 'btn btn-primary' if request.url.include?("edit")%> 
                 </div> 
-                <div class="col-md-3">
+                <div class="col-md-3 show">
                   <%= link_to 'Show', @city, class: 'btn btn-primary' if request.url.include?("edit")%> 
                 </div>                                                    
               </div>
