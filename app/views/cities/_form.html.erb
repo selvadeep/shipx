@@ -1,29 +1,28 @@
 <div class="container m-t-30">
   <div class="row">
-        <div class="card-box">
-
-<style>
-  .card-box{
-    width: 50%;
-  }
-  .form-control{
-    width: 50%;
-  }
-  .submitted{
-    width: 100px;    
-  }
-  .back{
-    width: 100px;
-  }
-  .show{
-    width: 100px;
-    margin-left: -70%;
-  }
-  .showback{
-    width: 100px;
-    margin-left: -460%;
-  }
-</style>
+      <div class="card-box">
+        <style>
+          .card-box{
+            width: 50%;
+          }
+          .form-control{
+            width: 50%;
+          }
+          .submitted{
+            width: 100px;    
+          }
+          .back{
+            width: 100px;
+          }
+          .show{
+            width: 100px;
+            margin-left: -70%;
+          }
+          .showback{
+            width: 100px;
+            margin-left: -460%;
+          }
+        </style>
 
 <%= form_for(city) do |f| %>
   <% if city.errors.any? %>
@@ -37,58 +36,45 @@
       </ul>
     </div>
   <% end %>
-
-              <div class="row m-t-30">
-                <div class="col-md-12">
-                  <%= f.text_field :name, placeholder: 'Enter you name', class: 'form-control' %>
-                </div>
-              </div>
-
-
-              <div class="row m-t-30">
-                <div class="col-md-12">
-                  <%= f.text_field :state, placeholder: 'Enter you state', class: 'form-control' %>
-                </div>
-              </div>
-
-              <div class="row m-t-30">
-                <div class="col-md-12">
-                  <%= f.text_field :country, placeholder: 'Enter you country', class: 'form-control' %>
-                </div>
-              </div>
-
-
-              <div class="row m-t-30">
-                <div class="col-md-12">
-                  <%= f.text_field :lat, placeholder: 'Enter you latitude', class: 'form-control' %>
-                </div>
-              </div>
-
-              <div class="row m-t-30">
-                <div class="col-md-12">
-                  <%= f.text_field :lng, placeholder: 'Enter you longitude', class: 'form-control' %>
-                </div>
-              </div>
-
-
-
-              <div class="row m-t-30 text-center">
-              
-                <div class="col-md-6 submitted">
-                  <%= f.submit "Submit", class: 'btn btn-primary' %>
-                </div>
-                <div class="col-md-6 back">
-                  <%= link_to 'Back', cities_path, class: 'btn btn-primary' if request.url.include?("new")%> 
-                </div> 
-                <div class="col-md-3">
-                  <%= link_to 'Show', @city, class: 'btn btn-primary show' if request.url.include?("edit")%> 
-                </div>                 
-                <div class="col-md-3 back">
-                  <%= link_to 'Back', cities_path, class: 'btn btn-primary showback' if request.url.include?("edit")%> 
-                </div> 
-                                                   
-              </div>
-            
+    <div class="row m-t-30">
+      <div class="col-md-12">
+        <%= f.text_field :name, placeholder: 'Enter you name', class: 'form-control' %>
+      </div>
+    </div>
+    <div class="row m-t-30">
+      <div class="col-md-12">
+        <%= f.text_field :state, placeholder: 'Enter you state', class: 'form-control' %>
+      </div>
+    </div>
+    <div class="row m-t-30">
+      <div class="col-md-12">
+        <%= f.text_field :country, placeholder: 'Enter you country', class: 'form-control' %>
+      </div>
+    </div>
+    <div class="row m-t-30">
+      <div class="col-md-12">
+        <%= f.text_field :lat, placeholder: 'Enter you latitude', class: 'form-control' %>
+      </div>
+    </div>
+    <div class="row m-t-30">
+      <div class="col-md-12">
+        <%= f.text_field :lng, placeholder: 'Enter you longitude', class: 'form-control' %>
+      </div>
+    </div>
+    <div class="row m-t-30 text-center">
+      <div class="col-md-6 submitted">
+        <%= f.submit "Submit", class: 'btn btn-primary' %>
+      </div>
+      <div class="col-md-6 back">
+        <%= link_to 'Back', cities_path, class: 'btn btn-primary' if request.url.include?("new")%> 
+      </div> 
+      <div class="col-md-3">
+        <%= link_to 'Show', @city, class: 'btn btn-primary show' if request.url.include?("edit")%> 
+      </div>                 
+      <div class="col-md-3 back">
+        <%= link_to 'Back', cities_path, class: 'btn btn-primary showback' if request.url.include?("edit")%> 
+      </div> 
+    </div>
 <% end %>
 
 </div>
